@@ -25,7 +25,8 @@ describe('When visiting a web page', function() {
 
   it('should be able to extract textContent from each node', function() {
     var pageText = readTime.getTextFromNodes(readTime.convertToArray(html));
-    expect(pageText.length).to.eql(8428);
+    // expect(pageText.length).to.eql(8428);
+    expect(pageText.length).to.eql(8415);
   });
 
   it('should remove punctuation and replace with "" from all text content to avoid weird counting', function() {
