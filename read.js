@@ -29,5 +29,11 @@ var readTime = {
   },
   calcWPM: function (wordCount) {
     return Math.floor(wordCount/readTime.wpm) +" minute read";
+  },
+  words: function (array) {
+    text = readTime.getTextFromNodes(array);
+    filteredText = readTime.removePunctuation(text);
+    wordCount = readTime.countWords(filteredText);
+    return readTime.calcWPM(wordCount);
   }
 };

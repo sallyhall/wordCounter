@@ -11,5 +11,5 @@ function ready(fn) {
 ready(function () {
   var childArr = [].slice.call(document.body.children);
   readTime.configWPM(500);
-  document.querySelector('h3.reading-time').innerHTML = readTime.calcWPM(childArr);
+  document.querySelector('h3.reading-time').innerHTML = readTime.words(childArr);
 });
